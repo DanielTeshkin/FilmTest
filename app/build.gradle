@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -13,6 +15,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //Api
+        buildConfigField('String', 'BASE_URL', '"https://api.nytimes.com/svc/movies/"')
+
     }
 
     buildTypes {
@@ -28,6 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding.enabled = true
 }
 
 dependencies {
@@ -40,9 +47,14 @@ dependencies {
     implementation 'com.squareup.moshi:moshi-kotlin:1.11.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation"org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2"
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.9'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation 'androidx.fragment:fragment-ktx:1.1.0'
+
+    //Dagger Hilt
+    implementation "com.google.dagger:hilt-android:2.39.1"
+    kapt "com.google.dagger:hilt-compiler:2.39.1"
 
     //noinspection GradleCompatible
     implementation 'com.android.support:recyclerview-v7:28.0.0'
@@ -51,8 +63,16 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.4.1"
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+
+    implementation 'androidx.paging:paging-common-ktx:3.1.1'
+    implementation 'androidx.paging:paging-runtime-ktx:3.1.1'
 }

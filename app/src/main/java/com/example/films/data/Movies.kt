@@ -2,7 +2,7 @@ package com.example.test1
 
 import com.google.gson.annotations.SerializedName
 
-data class Models(
+data class Movies(
     @SerializedName("status" ) var status     : String?            = null,
     @SerializedName("copyright") var copyright  : String?            = null,
     @SerializedName("has_more" ) var hasMore    : Boolean?           = null,

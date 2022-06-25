@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.129" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.123" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/activity_main2.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/end_item.xml" value="0.4" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/film_item.xml" value="0.264" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/form.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/movies_activity.xml" value="0.264" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/progress_item.xml" value="0.11197916666666667" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Test1/app/src/main/res/layout/splash_activity.xml" value="0.25" />
       </map>
     </option>
   </component>
