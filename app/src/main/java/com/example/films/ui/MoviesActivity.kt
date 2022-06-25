@@ -30,9 +30,8 @@ class MoviesActivity : AppCompatActivity() {
 
     }
    private fun initUI(){
-        val recyclerView=binding.rvMovies
-
-        recyclerView.layoutManager= LinearLayoutManager(this)
+       val recyclerView=binding.rvMovies
+       recyclerView.layoutManager= LinearLayoutManager(this)
         recyclerView.adapter=adapter.withLoadStateHeaderAndFooter(header = MoviesLoaderStateAdapter(), footer=MoviesLoaderStateAdapter() )
         lifecycleScope.launch {
             viewModel.movies.collectLatest {
@@ -43,7 +42,6 @@ class MoviesActivity : AppCompatActivity() {
             if (loadState.refresh==LoadState.Loading)
                 binding.progressBar.visibility=View.VISIBLE
             else binding.progressBar.visibility=View.GONE
-
         }
 
     }
